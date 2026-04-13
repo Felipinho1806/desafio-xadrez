@@ -3,6 +3,8 @@ public class Xadrez {
     char [][]matriz = new char[8][];
     int numPecas = 0;
 
+    // Nesse método eu crio a matriz só com '.', pontos esses que são substituídos na Main
+
     public char[][] metodo() {
         for(int i=0; i<matriz.length; i++){
             matriz[i] = new char[8];
@@ -12,6 +14,8 @@ public class Xadrez {
         }
         return matriz;
     }
+
+    // Método de contar as peças, eu não curti esse monte de for amontoado e aqui tá aberto uma nova possibilidade de otimização futura
 
     public int contarPecas(int x, int y) {
         for (int j=y+1; j<matriz[x].length; j++) {
