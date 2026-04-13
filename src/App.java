@@ -7,7 +7,9 @@ public class App {
         for(int i=0; i<resultado.length; i++) {
             for(int j=0; j<resultado[i].length; j++) {
                 resultado[1][3] = 'I';
+                resultado[4][3] = 'B';
                 resultado[5][3] = 'I';
+                resultado[2][6] = 'B';
                 resultado[2][7] = 'I';
                 resultado[2][3] = 'T';
                 System.out.print(resultado[i][j] + " ");

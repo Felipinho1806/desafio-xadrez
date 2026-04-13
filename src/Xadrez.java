@@ -14,14 +14,40 @@ public class Xadrez {
     }
 
     public int contarPecas(int x, int y) {
-        for(int i=0; i<matriz[x].length; i++) {
-            if(matriz[x][i] == 'I') {
+        for (int j=y+1; j<matriz[x].length; j++) {
+            if (matriz[x][j]=='B') {
+                break;
+            }
+            if (matriz[x][j]=='I') {
                 numPecas++;
+                break;
             }
         }
-        for(int i=0; i<matriz[y].length; i++) {
-            if(matriz[i][y] == 'I') {
+        for (int j=y-1; j>=0; j--) {
+            if (matriz[x][j]=='B') {
+                break;
+            }
+            if (matriz[x][j]=='I') {
                 numPecas++;
+                break;
+            }
+        }
+        for (int i=x+1; i<matriz.length; i++) {
+            if (matriz[i][y]=='B') {
+                break;
+            }
+            if (matriz[i][y]=='I') {
+                numPecas++;
+                break;
+            }
+        }
+        for (int i=x-1; i>=0; i--) {
+            if (matriz[i][y]=='B') {
+                break;
+            }
+            if (matriz[i][y]=='I') {
+                numPecas++;
+                break;
             }
         }
         return numPecas;
